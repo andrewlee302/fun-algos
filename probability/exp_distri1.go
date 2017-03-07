@@ -17,8 +17,8 @@ func main() {
 	for i := 0; i < times; i++ {
 		sum += nextTime(lambda)
 	}
-	// the mean should be approximate the 1/lambda
-	fmt.Println(sum / float64(times))
+	// the number of arrivals in 0-sum should be approximate the mean (sum * lambda)
+	fmt.Println(sum*lambda, float64(times))
 }
 
 // Interval between events satisfy the exponential distribution
